@@ -1,0 +1,162 @@
+@charset "UTF-8";
+html {
+  font-size: 10px;
+}
+/* 定义变量 */
+:root {
+  /* 主要颜色 */
+  --gray: #333;
+  --lightgray: #ddd;
+  --weightgray: #999;
+  --blue: #0099ff;
+  --lightblue: #00ccff;
+  --green: #009900;
+  --lightgreen: #99ff99;
+  --purple: #cc66ff;
+  --pink: #ff99ff;
+  --red: #cc3300;
+  --orange: #ffcc00;
+  --lightorange: #fff3d4;
+  /* 其他 */
+  --header-h: 80px; /* 网站头部高度 */
+  --footer-h: 50px; /* 网站尾部高度 */
+  --mian-f: 1.4rem; /* 网站主要字体大小 */
+}
+/* 定义方法 */
+@define-extend main-w { 
+  width: 60%;
+  min-width: 1000px;
+}
+/* 公共类 */
+.btn {
+  display: inline-block;
+  padding: 5px 20px;
+  color: var(--weightgray);
+  border: 1px solid var(--weightgray);
+  background: white;
+  border-radius: 5px;
+  white-space: nowrap;
+  &:hover {
+    color: white;
+    background: var(--gray);
+  }
+  &-info {
+    color: var(--blue);
+    border: 1px solid var(--blue);
+  }
+  &-info:hover {
+    color: white;
+    background: var(--blue);
+  }
+  &-success {
+    color: var(--green);
+    border: 1px solid var(--green);
+  }
+  &-success:hover {
+    color: white;
+    background: var(--green);
+  }
+  &-pink {
+    color: var(--pink);
+    border: 1px solid var(--pink);
+  }
+  &-pink:hover {
+    color: white;
+    background: var(--pink);
+  }
+  &-purple {
+    color: var(--purple);
+    border: 1px solid var(--purple);
+  }
+  &-purple:hover {
+    color: white;
+    background: var(--purple);
+  }
+  &-warning {
+    color: var(--orange);
+    border: 1px solid var(--orange);
+  }
+  &-warning:hover {
+    color: white;
+    background: var(--orange);
+  }
+  &-error {
+    color: var(--red);
+    border: 1px solid var(--red);
+  }
+  &-error:hover {
+    color: white;
+    background: var(--red);
+  }
+}
+/* 开始 */
+body {
+  display: flex;
+  min-height: 100vh;
+  min-width: 1000px;
+  flex-direction: column;
+}
+header {
+  border-bottom: 1px solid var(--lightgray);
+  height: var(--header-h);
+  display: flex;
+  justify-content: center;
+  section {
+    @extend main-w;
+    display: flex;
+    justify-content: space-between;
+  }
+  hgroup {
+    width: auto;
+    display: flex;
+    align-items: center;
+    h1 {
+      margin-left: 10px;
+      font-weight: 400;
+    }
+    img {
+      order: -1;
+      width: calc(var(--header-h)-20px);
+      height: calc(var(--header-h)-20px);
+    }
+  }
+  nav {
+    width: auto;
+    ul {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: space-between;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      margin-right: 5px;
+    }
+  }
+}
+footer {
+  display: flex;
+  height: var(--footer-h);
+  border-top: 1px solid var(--blue);
+  justify-content: center;
+  p {
+    @extend main-w;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+main {
+  @extend main-w;
+  display: flex;
+  flex: 1;
+  align-self: center;
+  article {
+    flex: 3;
+    height: 1800px;
+  }
+  aside {
+    flex: 1;
+  }
+}

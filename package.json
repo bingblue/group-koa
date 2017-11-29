@@ -1,0 +1,94 @@
+{
+  "name": "group",
+  "description": "滨清科技,最炫、最潮流的科技网站，我们追寻最前沿的技术、展现最炫酷的效果，让你感受科技无可抵挡的魅力！",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node server/bin/www",
+    "prd": "pm2 start server/bin/www",
+    "watch": "gulp watch --gulpfile build/gulpfile.js",
+    "clean": "gulp clean --gulpfile build/gulpfile.js",
+    "build": "gulp --gulpfile build/gulpfile.js",
+    "lint": "standard --fix",
+    "test": "ava -v test/qiniu.js"
+  },
+  "author": {
+    "name": "小牧COOL",
+    "weibo": "http://weibo.com/xiaomucool",
+    "QQ": "895355044",
+    "QQGroup": "206683621"
+  },
+  "homepage": "https://www.bingblue.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bingblue/group.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bingblue/group/issues"
+  },
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "https://github.com/bingblue/group/blob/master/LICENSE"
+    }
+  ],
+  "keywords": [
+    "bingblue",
+    "nodejs",
+    "koa",
+    "mongodb",
+    "mongoose",
+    "group"
+  ],
+  "dependencies": {
+    "colors": "^1.1.2",
+    "debug": "^3.1.0",
+    "glob": "^7.1.2",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.1.0",
+    "koa-onerror": "^3.1.0",
+    "koa-passport": "^4.0.1",
+    "koa-redis": "^3.1.1",
+    "koa-router": "^7.2.1",
+    "koa-session": "^5.5.0",
+    "koa-static": "^4.0.1",
+    "koa-views": "^6.1.0",
+    "mongoose": "^4.12.1",
+    "passport-github2": "^0.1.11",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.0-rc.4",
+    "qiniu": "^7.1.1"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "cssnano": "^3.10.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sequence": "^0.4.6",
+    "gulp-uglify": "^3.0.0",
+    "postcss-cssnext": "^3.0.2",
+    "precss": "^2.0.0",
+    "standard": "^10.0.3"
+  },
+  "standard": {
+    "globals": [
+      "$",
+      "JQuery",
+      "Config",
+      "Util",
+      "FileReader"
+    ],
+    "ignore": [
+      "node_modules/**.js"
+    ]
+  },
+  "readme": "ERROR: No README data found!"
+}
