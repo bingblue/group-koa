@@ -31,7 +31,7 @@ gulp.task('minifyJs', () =>
   gulp.src([config.js.dest + '/**/*.min.js', '!' + config.js.dest + '/vendor/**/*.min.js'])
     .pipe(uglify({
       mangle: {
-        toplevel: true  // 混淆
+        toplevel: false  // 混淆
       }
     }))
     .pipe(gulp.dest(config.js.dest))

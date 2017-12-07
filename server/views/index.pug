@@ -1,11 +1,11 @@
-extends layout
+extends part/layout
 
 block content
-  include ./header.pug
+  include part/header.pug
   main
     article
       figure.hero
-        img(src="/new/img/logo_fat.png", alt="bingblue logo")
+        img(src= app.root + "/img/logo_fat.png", alt="bingblue logo")
         figcaption Bing Bule
         p Bingblue是一家深刻搭街坊，
         p 在对的飞洒多少阿斯顿说的地方士大夫十分，
@@ -29,4 +29,4 @@ block content
     aside
       section
 
-  include ./footer.pug
+  include part/footer.pug

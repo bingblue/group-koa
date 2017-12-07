@@ -13,9 +13,9 @@ html(lang='en')
     link(rel='apple-touch-icon', href='apple-touch-icon.png')
     //- Place favicon.ico in the root directory
     //- CSS 开始
-    link(rel='stylesheet', href='/new/css/normalize.css')
+    link(rel='stylesheet', href= app.root + '/css/normalize.css')
     link(rel='stylesheet', href='https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css')
-    link(rel='stylesheet', href='/new/css/style.min.css')
+    link(rel='stylesheet', href= app.root + '/css/style.min.css')
   body
     <!--[if lte IE 9]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -25,7 +25,7 @@ html(lang='en')
 
     script(src='https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js', crossorigin='anonymous')
     script.
-      window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\\/script>')
-    script(src='/new/js/config.min.js')
-    script(src='/new/js/util.min.js')
-    script(src='/new/js/index.min.js')
+      window.jQuery || document.write('<script src="#{ app.root }/js/vendor/jquery-3.2.1.min.js"><\\/script>')
+    script(src= app.root + '/js/config.min.js')
+    script(src= app.root + '/js/util.min.js')
+    script(src= app.root + '/js/index.min.js')

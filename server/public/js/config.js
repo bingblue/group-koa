@@ -19,5 +19,4 @@ const Config = {
     }
   }
 }
-
 console.log(Config)
