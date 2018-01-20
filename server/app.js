@@ -5,7 +5,7 @@ const path = require('path')
 const views = require('koa-views')
 const json = require('koa-json')
 const onerror = require('koa-onerror')
-const bodyparser = require('koa-bodyparser')
+const koaBody = require('koa-better-body')
 const logger = require('koa-logger')
 const koaStatic = require('koa-static')
 const Router = require('koa-router')
@@ -22,10 +22,8 @@ const router = new Router()
 onerror(app)
 
 // middlewares
-app.use(bodyparser({
-  enableTypes: ['json', 'form', 'text']
-}))
 app.use(json())
+app.use(koaBody({multipart: true}))
 app.use(logger())
 app.use(koaStatic(path.join(__dirname, '/public')))
 

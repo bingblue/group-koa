@@ -1,7 +1,7 @@
 'use strict'
 const mongoose = require('../config/db')
 
-var countersSchema = new mongoose.Schema({
+const countersSchema = new mongoose.Schema({
   _id: String,
   seq: { // 从100000增长
     type: Number,

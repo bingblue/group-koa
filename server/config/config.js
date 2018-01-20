@@ -33,6 +33,16 @@ const config = {
     accessKey: 'wFpe6IbqupK7dFZ0cP--Nu1KfuwMoYbCcyk1bB91',
     secretKey: 'LhX0qDfrtCicm4Cy3uTL4vrrjMpS9o8_01qJfk-S',
     bucket: 'bingblue'
+  },
+  email: {
+    from: '滨清科技 <system@bingblue.com>',
+    qqex: {
+      service: 'QQex',
+      auth: {
+        user: 'system@bingblue.com',
+        pass: 'gL6rg2fJecTHHZm3' // smtp密码
+      }
+    }
   }
 }
 

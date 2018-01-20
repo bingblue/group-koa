@@ -10,7 +10,7 @@
     "clean": "gulp clean --gulpfile build/gulpfile.js",
     "build": "gulp --gulpfile build/gulpfile.js",
     "lint": "standard --fix",
-    "test": "ava -v test/qiniu.js"
+    "test": "ava -v test/email.js"
   },
   "author": {
     "name": "小牧COOL",
@@ -45,7 +45,7 @@
     "debug": "^3.1.0",
     "glob": "^7.1.2",
     "koa": "^2.3.0",
-    "koa-bodyparser": "^4.2.0",
+    "koa-better-body": "^3.0.4",
     "koa-json": "^2.0.2",
     "koa-logger": "^3.1.0",
     "koa-onerror": "^3.1.0",
@@ -56,6 +56,7 @@
     "koa-static": "^4.0.1",
     "koa-views": "^6.1.0",
     "mongoose": "^4.12.1",
+    "nodemailer": "^4.4.1",
     "passport-github2": "^0.1.11",
     "passport-local": "^1.0.0",
     "pug": "^2.0.0-rc.4",
