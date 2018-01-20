@@ -5,7 +5,7 @@ const config = {
     keywords: 'bingblue、滨清、滨清科技、群官网、Nodejs',
     description:
       '滨清科技 - 最炫、最潮流的科技网站，我们追寻最前沿的技术、展现最炫酷的效果，让你感受科技无可抵挡的魅力！',
-    root: ''
+    root: '/new'
   },
   keys: ['mu-koa2'],
   mongodb: {
@@ -13,7 +13,7 @@ const config = {
     db: 'group',
     host: '127.0.0.1',
     port: 27017,
-    url: 'mongodb://127.0.0.1:27017/test'
+    url: 'mongodb://127.0.0.1:27017/group'
   },
   sqe: [], // {_id: 'userId'}, {_id: 'groupId'}
   jwt: {
