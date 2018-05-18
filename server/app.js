@@ -13,7 +13,9 @@ const Config = require('./config/config')
 // 鉴权
 const session = require('koa-session')
 const redisStore = require('koa-redis')
-const passport = require('koa-passport')
+// const passport = require('koa-passport')
+// 跨域
+const cors = require('koa2-cors')
 
 const app = new Koa()
 const router = new Router()
@@ -21,6 +23,7 @@ const router = new Router()
 // error handler
 onerror(app)
 
+app.use(cors())
 // middlewares
 app.use(json())
 app.use(koaBody({multipart: true}))
@@ -36,7 +39,8 @@ app.keys = Config.keys
 app.use(session({
   store: redisStore(Config.redis)
 }, app))
-require('./controllers/auth.js')
+const passport = require('./controllers/auth')
+
 app.use(passport.initialize())
 app.use(passport.session())
 

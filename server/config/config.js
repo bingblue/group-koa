@@ -5,7 +5,7 @@ const config = {
     keywords: 'bingblue、滨清、滨清科技、群官网、Nodejs',
     description:
       '滨清科技 - 最炫、最潮流的科技网站，我们追寻最前沿的技术、展现最炫酷的效果，让你感受科技无可抵挡的魅力！',
-    root: '/new'
+    root: ''
   },
   keys: ['mu-koa2'],
   mongodb: {
@@ -17,7 +17,10 @@ const config = {
   },
   sqe: [], // {_id: 'userId'}, {_id: 'groupId'}
   jwt: {
-    secret: 'me' // 默认
+    secret: 'me', // 默认
+    issuer: 'www.bingblue.com', // 签发者
+    audience: 'www.bingblue.com', // 接收方
+    expiresIn: '2h'
   },
   github: {
     clientID: 'e75de7b1131e2b859ed8',

@@ -9,6 +9,7 @@ router.get('/', async (ctx, next) => {
 })
 
 router.get('/login', async (ctx, next) => {
+  console.log('index => /login')
   await ctx.render('login', {
     title: '登录账户'
   })
