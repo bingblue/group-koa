@@ -17,10 +17,10 @@ const config = {
   },
   sqe: [], // {_id: 'userId'}, {_id: 'groupId'}
   jwt: {
-    secret: 'me', // 默认
+    secret: 'me', // 密钥
     issuer: 'www.bingblue.com', // 签发者
     audience: 'www.bingblue.com', // 接收方
-    expiresIn: '2h'
+    expiresIn: '2h' // 过期时间
   },
   github: {
     clientID: 'e75de7b1131e2b859ed8',
